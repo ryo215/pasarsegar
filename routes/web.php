@@ -15,11 +15,14 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('index');
-});
+})->name('index');
 
 Route::get('/produk', function () {
     return view('produk');
-});
+})->name('produk');
+Route::get('/keranjang', function () {
+    return view('keranjang');
+})->name('keranjang');
 
 Route::get('/admin', function () {
     return view('admin.index');

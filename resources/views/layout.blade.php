@@ -13,7 +13,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Montserrat:wght@700&display=swap" rel="stylesheet">
 <script src="https://kit.fontawesome.com/110f61632b.js" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-
+<link rel="stylesheet" href="css/jquery.nice-number.css">
     <!-- Owl Carousel Assets -->
     <link href="owl-carousel/owl.carousel.css" rel="stylesheet">
     <link href="owl-carousel/owl.theme.css" rel="stylesheet">
@@ -70,19 +70,19 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav  mb-2 mb-lg-0 ms-auto py-2">
             <li class="nav-item px-3">
-              <a class="nav-link  " aria-current="page" href="/">Home</a>
+              <a class="nav-link  " aria-current="page" href="{{ route('index') }}">Home</a>
             </li>
             <li class="nav-item px-3">
-              <a class="nav-link " href="/produk">Produk</a>
+              <a class="nav-link " href="{{ route('produk') }}">Produk</a>
             </li>
             <li class="nav-item px-3">
               <a class="nav-link " href="#"><i class="bi bi-search"></i>&nbsp;&nbsp;<span class="navt">Cari</span></a>
             </li>
             <li class="nav-item px-3">
-            <a class="nav-link " href="#"><i class="bi bi-cart-fill"></i>&nbsp;&nbsp;<span class="navt">Keranjang</span></a>
+            <a class="nav-link " href="{{ route('keranjang') }}"><i class="bi bi-cart-fill"></i>&nbsp;&nbsp;<span class="navt">Keranjang</span></a>
             </li>
             <li class="nav-item px-3">
-              <a class="nav-link " href="#"><i class="bi bi-person-circle"></i>&nbsp;&nbsp;<span class="navt">User</span></a>
+              <a class="nav-link " data-bs-toggle="offcanvas" href="#offcanvasExample"  aria-controls="offcanvasExample"><i class="bi bi-person-circle"></i>&nbsp;&nbsp;<span class="navt">User</span></a>
             </li>
             
            
@@ -93,6 +93,7 @@
       </div>
     </nav>  
 @yield('container')
+
  
 
 <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
@@ -120,9 +121,10 @@
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+
 
 <script src="js/jquery.min.js"></script>
+<script src="js/jquery.nice-number.js"></script>
     <script src="owl-carousel/owl.carousel.min.js"></script>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
@@ -194,7 +196,10 @@
  
 
       });
+      $('input[type="number"]').niceNumber();
     });
+
   </script>
+  
 </body>
 </html>
